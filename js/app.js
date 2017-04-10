@@ -74,36 +74,90 @@ $('button').click(function(){
 // fonction pour analyser si les conditions de victoire en ligne sont réunies
 
 $('button').on('click',function(){
-	//console.log(result);
-	var m =0;
-	var tableau = result;
-	var countWinP1 = 0;
-	var countWinP2 = 0;
-	var check;
-
-	var prevColor;
-	var lenght;
 	
-	for(var w = 0; w <= tableau.length; w++){
+
+
+	var stockVal="";
+
+	for (var i = 0; i < result.length ; i++) {
+		//if (result[i][0]!=0) {
+			stockVal += result[i][0] 
+			//console.log(stockVal)
+		}
+
+		if (stockVal.includes("p1p1p1p1") ) {
+			window.alert("win");
+			console.log('p1');
+		}else if (stockVal.includes("p2p2p2p2")){
+
+			console.log('p2')
+		}
+
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//console.log(result);
+	// var m =0;
+	// var tableau = result;
+	// var countWinP1 = 0;
+	// var countWinP2 = 0;
+	// var check;
+
+	// var prevColor;
+	// var lenght;
+	
+	// for(var w = 0; w <= tableau.length; w++){
 			
-			prevColor = tableau[w][0];
+	// 		prevColor = tableau[w][0];
 
-			for (var i = 1 ; i <= 6; i++){
+	// 		for (var i = 1 ; i <= 6; i++){
 
 
-				if( prevColor == tableau[w][i] ){
+	// 			if( prevColor == tableau[w][i] ){
 
-					length++;
-				}else{
-					length = 0;
+	// 				length++;
+	// 			}else{
+	// 				length = 0;
 				
-					prevColor = tableau[w][i];
+	// 				prevColor = tableau[w][i];
 				
-				console.log( length );
-				}
-				if( length >= 3 ){
-					alert( 'gagné !' );
-				}
+	// 			console.log( length );
+	// 			}
+	// 			if( length >= 3 ){
+	// 				alert( 'gagné !' );
+	// 			}
 
 
 /*
@@ -126,10 +180,10 @@ $('button').on('click',function(){
 					countWinP2 = 0;
 				}
 */				
-			}		
-	};
+	// 		}		
+	// };
 		
-});
+//});
 /*
 			result[k][m] === 'p1' || result[k][m] === 'p2'){ 
 			for(var m = 0; m <3; m++){
