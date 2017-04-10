@@ -101,15 +101,16 @@ $('table').on('click',function(){
 			for (var i = 1 ; i <= 6; i++){
 
 
-				if( prevColor == tableau[w][i] )
+				if( prevColor == tableau[w][i] ){
+
 					length++;
-					else
+				}else{
 					length = 0;
-
-				prevColor = tableau[w][i];
+				
+					prevColor = tableau[w][i];
+				
 				console.log( length );
-
-
+				}
 				if( length >= 3 ){
 					alert( 'gagné !' );
 				}
