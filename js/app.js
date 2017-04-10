@@ -28,7 +28,7 @@ $('button').click(function(){
 	var button = parseInt($(this).html());
 	col = button;
 	var tableau = result;
-	for(var i =5; i>= 0;i--){
+	for(var i = 5; i >= 0; i--){
 
 		if(tableau[i][button] == 0){
 			//tableau[button].push('a');
@@ -83,10 +83,10 @@ $('button').on('click',function(){
 
 	var stockVal="";
 
-for(var j = 0; j <= 7; j++){
+for(var j = 0; j <= 6; j++){
 	for (var i = 0; i < result.length ; i++) {
 		
-			stockVal += result[i][j] 
+			stockVal += result[i][j]; 
 			
 		}
 
@@ -103,19 +103,28 @@ for(var j = 0; j <= 7; j++){
 
 
 
+// fonction pour analyser les condtitions de victoire en ligne
 
+$('button').on('click', function(){
+	
+	var stockVal = "";
 
+	for(var i = 0; i <= 5; i++){
 
+		for(var j = 0; j < result[i].length; j++){
 
+			stockVal += result[i][j];
+		
 
+			if(stockVal.includes("p1p1p1p1")){
+				console.log("p1");
+			} else if(stockVal.includes("p2p2p2p2")){
+				console.log('p2');
+			}
+		}
 
-
-
-
-
-
-
-
+	}
+});
 
 
 
