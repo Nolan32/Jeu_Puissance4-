@@ -10,18 +10,8 @@ var a ;
 var row;
 var col;
 
+// fonction qui permet d'alterner tour impair => joueur 1 et tour pair => joueur 2
 
-/*
-$('tbody td').click(function() {
-	counter++;
-	if (counter %2 === 0) {
-//console.log(counter)
-	return $(this).addClass('p1');
-	}
-
-	$(this).addClass('p2');
-});
-*/
 
 	$('button').click(function(){
 		counter++;		
@@ -31,7 +21,7 @@ $('tbody td').click(function() {
 
 
 
-
+// fonction qui stocke le choix d'un joueur dans un tableau  [[ligne1[colonne1, colonne2, etc,], [ligne2[...]], ... ]
 
 
 $('button').click(function(){
@@ -59,7 +49,7 @@ $('button').click(function(){
 
 
 
-
+// fonction qui régénère le tableau html dynamiquement avec des background-colors pour les cases séléctionnées par les joueurs
 
 $('button').click(function(){
 	$('tbody tr').remove();
@@ -81,9 +71,9 @@ $('button').click(function(){
 })
 
 
+// fonction pour analyser si les conditions de victoire en ligne sont réunies
 
-
-$('table').on('click',function(){
+$('button').on('click',function(){
 	//console.log(result);
 	var m =0;
 	var tableau = result;
