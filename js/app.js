@@ -71,7 +71,11 @@ $('button').click(function(){
 })
 
 
-// fonction pour analyser si les conditions de victoire en ligne sont réunies
+
+
+
+
+// fonction pour analyser les conditions de victoire en colonne
 
 $('button').on('click',function(){
 	
@@ -79,10 +83,11 @@ $('button').on('click',function(){
 
 	var stockVal="";
 
+for(var j = 0; j <= 7; j++){
 	for (var i = 0; i < result.length ; i++) {
-		//if (result[i][0]!=0) {
-			stockVal += result[i][0] 
-			//console.log(stockVal)
+		
+			stockVal += result[i][j] 
+			
 		}
 
 		if (stockVal.includes("p1p1p1p1") ) {
@@ -92,8 +97,9 @@ $('button').on('click',function(){
 
 			console.log('p2')
 		}
+	}
 
-	});
+});
 
 
 
